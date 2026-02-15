@@ -102,44 +102,67 @@
         @media (max-width: 768px) {
             .page { padding-bottom: 5rem; }
         }
-        /* 1. Hacemos que la lista de productos sea más flexible */
+      /* 1. LISTA DE PRODUCTOS: Más espacio para ver lo que compraste */
 #cart-items {
-    max-height: 45vh; /* Ocupa hasta el 45% de la altura de la pantalla */
+    max-height: 50vh; /* Aumentamos un poquito para que entren más productos */
     overflow-y: auto;
-    padding-right: 10px;
+    padding-right: 8px;
+    margin-bottom: 10px;
 }
 
-/* 2. Estilizamos la barrita de scroll para que no moleste */
+/* Scrollbar fina y moderna */
 #cart-items::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
 }
 #cart-items::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: #FF3D00; /* Color de tu marca */
     border-radius: 10px;
 }
 
-/* 3. Ajustamos el bloque de abajo (Total y Botón) */
+/* 2. EL BLOQUE DE ABAJO: Super compacto */
 .cart-footer {
-    padding: 15px !important; /* Menos espacio interno */
-    border-top: 1px solid #eee;
+    padding: 10px !important; /* Mínimo espacio interno */
+    background: #fff;
+    border-top: 2px solid #f1f1f1;
 }
 
+/* Total de pago más sutil */
 .cart-footer h3 {
-    margin-bottom: 10px !important;
-    font-size: 1.2rem !important; /* Total un poco más chico */
+    margin: 5px 0 !important;
+    font-size: 1rem !important; 
+    display: flex;
+    justify-content: space-between;
 }
 
-/* El botón de WhatsApp más compacto */
+/* 3. BOTÓN DE WHATSAPP: No más exageración */
 .btn-whatsapp {
-    padding: 10px !important;
-    font-size: 14px !important;
+    width: 100% !important;
+    padding: 8px !important; /* Más petiso */
+    font-size: 13px !important; /* Letra más chica */
+    border-radius: 8px !important;
     margin-top: 5px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
-/* Los campos de nombre y dirección más juntos */
-.cart-body input, .cart-body select {
-    margin-bottom: 8px !important;
-    padding: 8px !important;
+/* Achicamos los botones de Envío/Retiro y campos de texto */
+.cart-body input, 
+.cart-body select,
+.delivery-options button {
+    margin-bottom: 5px !important; /* Pegamos todo más arriba */
+    padding: 6px 10px !important; /* Campos más finos */
+    font-size: 13px !important;
+    height: auto !important;
+}
+
+/* Si usás botones para Envío/Retiro (como en tu captura) */
+.delivery-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-bottom: 8px;
 }
     </style>
 </head>
@@ -615,6 +638,7 @@
 </body>
 
 </html>
+
 
 
 
